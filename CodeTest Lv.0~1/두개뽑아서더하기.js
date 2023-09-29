@@ -6,6 +6,5 @@ function solution(numbers) {
         answer.push(numbers[i] + numbers[j]);
     }
   }
-  console.log(answer.sort());
+  return answer.sort()
 }
-solution([2, 1, 3, 4, 1]);
