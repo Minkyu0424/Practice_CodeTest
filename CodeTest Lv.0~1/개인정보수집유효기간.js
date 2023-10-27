@@ -14,7 +14,6 @@ function solution(today, terms, privacies) {
     let rule = terms[i].split(" ");
     rules.push(...rule);
   }
-
   for (let j = 0; j < privacies.length; j++) {
     let date = dateChange(privacies[j])[0].split(".").join("");
     const index = rules.indexOf(privacies[j].split(" ")[1]);
