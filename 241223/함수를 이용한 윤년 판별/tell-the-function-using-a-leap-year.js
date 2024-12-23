@@ -6,7 +6,7 @@ const whichYear =(n)=>{
             console.log(true)
             return;
     }
-    if(n%4===0){
+    if(n % 100!==0 && n%4===0){
         console.log(true)
             return;
     }
