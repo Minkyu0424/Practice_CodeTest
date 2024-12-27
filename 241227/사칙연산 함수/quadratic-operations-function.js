@@ -1,20 +1,22 @@
 const fs = require(`fs`);
 const nums = fs.readFileSync('/dev/stdin').toString().split(' ');
+const num1 = parseInt(nums[0], 10);
+const num2 = parseInt(nums[2], 10);
 
-    switch (nums[1]) {
+switch (nums[1]) {
     case '+':
-        console.log(`${nums.join(' ')} = ${nums[0] + nums[2]}`);
+        console.log(`${nums.join(' ')} = ${num1 + num2}`);
         break;
     case '-':
-        console.log(`${nums.join(' ')} = ${nums[0] - nums[2]}`);
+        console.log(`${nums.join(' ')} = ${num1 - num2}`);
         break;
     case '*':
-        console.log(`${nums.join(' ')} = ${nums[0] * nums[2]}`);
+        console.log(`${nums.join(' ')} = ${num1 * num2}`);
         break;
     case '/':
-        console.log(`${nums.join(' ')} = ${Math.floor(nums[0] / nums[2])}`);
+        console.log(`${nums.join(' ')} = ${Math.floor(num1 / num2)}`);
         break;
     default:
-        console.log('False')
+        console.log('False');
         break;
 }
