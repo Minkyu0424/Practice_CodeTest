@@ -1,5 +1,5 @@
 const fs = require(`fs`);
-const nums = fs.readFileSync('/dev/stdin').toString().split(' ');
+const nums = fs.readFileSync('/dev/stdin').toString().trim().split(' ');
 const num1 = parseInt(nums[0], 10);
 const num2 = parseInt(nums[2], 10);
 
