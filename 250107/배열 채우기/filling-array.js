@@ -4,7 +4,8 @@ const fs = require('fs');
 const numArr = fs.readFileSync(0).toString().split(' ').map(Number).slice(0,10)
 
 for(i of numArr){
- i!== '0' && arr.push(i)
+ if(i=== 0) break;
+ arr.push(i)
 }
 
 ;
