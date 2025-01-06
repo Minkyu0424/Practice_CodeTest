@@ -3,11 +3,11 @@ const num = +fs.readFileSync(0).toString().trim()
 
 let sum = 1;
 let swap=num;
-const answer=[]
+const answer=[1]
 
 while(sum<100){
-    answer.push(sum)
     sum+=swap;
+    answer.push(sum)
     swap=sum;
 }
 
