@@ -13,7 +13,7 @@ while(true){
     const maxWhere = numberArr.findIndex((num)=> num === maxNum);
 // console.log(maxWhere,'최대치 위치')
     
-    if(maxWhere<=1){
+    if(maxWhere===0){
         answer.push(1);
         break;
     }
