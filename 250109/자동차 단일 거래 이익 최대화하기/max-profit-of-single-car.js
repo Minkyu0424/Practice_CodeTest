@@ -9,7 +9,10 @@ for(let i=0; i<cnt-2; i++){
         if(prices[i]-prices[j] > 0 ) dif.push(prices[i]-prices[j]);
     }
 }
-
+if(dif.length===0){
+    console.log(0)
+    return;
+}
 dif.sort((a,b)=> b-a);
 
 console.log(dif[0])
