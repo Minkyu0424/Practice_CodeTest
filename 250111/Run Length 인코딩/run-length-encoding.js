@@ -20,5 +20,5 @@ const answer =[]
     answer.push(cnt)
     cnt=1;
 
-console.log(answer.length)
+console.log(answer.join('').length)
 console.log(answer.join(''))
