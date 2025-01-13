@@ -1,0 +1,25 @@
+const fs = require('fs');
+const arr = fs.readFileSync(0).toString().trim().split('\n');
+const cnt = Number(arr[0]);
+
+const points = arr.slice(1).map((line) => line.split(' ').map(Number));
+
+const calculateDistance = (p1, p2) => Math.abs(p1[0] - p2[0]) + Math.abs(p1[1] - p2[1]);
+
+const totalDistance = (points) => {
+  let distance = 0;
+  for (let i = 0; i < points.length - 1; i++) {
+    distance += calculateDistance(points[i], points[i + 1]);
+  }
+  return distance;
+};
+
+let minDistance = Infinity;
+
+for (let i = 1; i < cnt - 1; i++) {
+  const modifiedPoints = points.slice(0, i).concat(points.slice(i + 1));
+  const distance = totalDistance(modifiedPoints);
+  minDistance = Math.min(minDistance, distance);
+}
+
+console.log(minDistance);
