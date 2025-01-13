@@ -1,0 +1,21 @@
+const fs = require('fs');
+const input = fs.readFileSync(0).toString().trim().split('\n');
+const commands = input.slice(1).map((line) => line.split(' '));
+
+let position = 0;
+const visited = new Map();
+
+for (const [step, direction] of commands) {
+  const move = Number(step);
+  
+  for (let i = 0; i < move; i++) {
+    const nextPosition = direction === 'R' ? position + 1 : position - 1;
+    const segment = [Math.min(position, nextPosition), Math.max(position, nextPosition)].join(',');
+
+    visited.set(segment, (visited.get(segment) || 0) + 1);
+    position = nextPosition;
+  }
+}
+
+const result = Array.from(visited.values()).filter((count) => count >= 2).length;
+console.log(result);
