@@ -1,0 +1,45 @@
+const fs = require('fs');
+let [spot, ...puzzles] = fs.readFileSync(0).toString().trim().split('\n');
+const [N, M] = spot.split(" ").map(Number);
+
+const directions = [
+  [-1, 0], [1, 0], [0, -1], [0, 1], [-1, -1], [-1, 1], [1, -1], [1, 1] 
+];
+
+
+function countLee(x, y) {
+  let count = 0;
+  const target = "LEE";
+
+  for (const [dx, dy] of directions) {
+    let nx = x;
+    let ny = y;
+    let found = true;
+
+    for (let i = 0; i < target.length; i++) {
+      if (nx >= 0 && nx < N && ny >= 0 && ny < M && puzzles[nx][ny] === target[i]) {
+        nx += dx;
+        ny += dy;
+      } else {
+        found = false;
+        break;
+      }
+    }
+
+    if (found) count++;
+  }
+
+  return count;
+}
+
+let totalCount = 0;
+
+for (let i = 0; i < N; i++) {
+  for (let j = 0; j < M; j++) {
+    if (puzzles[i][j] === 'L') {
+      totalCount += countLee(i, j);
+    }
+  }
+}
+
+console.log(totalCount);
