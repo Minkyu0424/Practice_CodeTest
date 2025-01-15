@@ -1,0 +1,16 @@
+const fs = require('fs');
+const [m1, d1, m2, d2] = fs.readFileSync(0).toString().trim().split(' ').map(Number);
+
+const weekDay = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+const date1 = new Date(2011, m1 - 1, d1);
+const date2 = new Date(2011, m2 - 1, d2);
+
+const diffInTime =(date2 - date1);
+const diffInDays = Math.ceil((diffInTime / (1000 * 60 * 60 * 24)) % 7);
+
+if(m1===m2 &&  d1===d2) {
+    console.log('Mon')
+}else{
+    console.log(weekDay.at(diffInDays))
+}
