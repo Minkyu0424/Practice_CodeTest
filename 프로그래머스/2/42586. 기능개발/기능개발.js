@@ -4,6 +4,7 @@ function solution(progresses, speeds) {
 
   progresses.forEach((work, i) => {
     const releaseTime = Math.ceil((100 - work) / speeds[i]);
+      
     if (timeArr.length === 0 || timeArr[0] >= releaseTime) {
       timeArr.push(releaseTime);
     } else {
