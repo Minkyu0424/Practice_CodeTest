@@ -7,3 +7,11 @@
 📌규칙 1. 맞은 문제만 업로드
 
 📌규칙 2. 일주일에 3개씩
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Math
+|  |
+| ------- |
+| [0009-palindrome-number](https://github.com/Minkyu0424/Practice_CodeTest/tree/master/0009-palindrome-number) |
+<!---LeetCode Topics End-->
