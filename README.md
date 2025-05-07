@@ -14,4 +14,9 @@
 |  |
 | ------- |
 | [0009-palindrome-number](https://github.com/Minkyu0424/Practice_CodeTest/tree/master/0009-palindrome-number) |
+| [3859-maximum-product-of-two-digits](https://github.com/Minkyu0424/Practice_CodeTest/tree/master/3859-maximum-product-of-two-digits) |
+## Sorting
+|  |
+| ------- |
+| [3859-maximum-product-of-two-digits](https://github.com/Minkyu0424/Practice_CodeTest/tree/master/3859-maximum-product-of-two-digits) |
 <!---LeetCode Topics End-->
