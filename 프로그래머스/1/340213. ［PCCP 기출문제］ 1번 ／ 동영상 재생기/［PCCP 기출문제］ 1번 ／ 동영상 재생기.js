@@ -20,7 +20,6 @@ function solution(video_len, pos, op_start, op_end, commands) {
 
         if (op_start <= pos && pos < op_end) pos = op_end;
     }
-    console.log(pos)
     const min = String(Math.floor(pos / 60)).padStart(2, '0');
     const sec = String(pos % 60).padStart(2, '0');
 
