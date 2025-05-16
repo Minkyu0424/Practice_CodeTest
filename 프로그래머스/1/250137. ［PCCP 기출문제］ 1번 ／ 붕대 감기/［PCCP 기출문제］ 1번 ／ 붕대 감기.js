@@ -1,9 +1,10 @@
 function solution(bandage, health, attacks) {
+    const [cooldown, healPerSec, bonusHeal] = bandage;
     let lastTime = 0;
     let nowHealth = health;
     
     const calcHeal =(time)=>{
-        return time*bandage[1] + Math.floor(time/bandage[0])*bandage[2]
+        return time * healPerSec + Math.floor(time/cooldown)*bonusHeal
     }
     
     for(let [time,attack] of attacks){
